@@ -7,7 +7,7 @@ import numpy as np
 import cv2 as cv
 from matplotlib import pyplot as plt
 
-img = cv.imread("lena.png") # aceita formatos extras .jpg, png e .tiff
+img = cv.imread("camarao.jpg") # aceita formatos extras .jpg, png e .tiff
 b, g, r = cv.split(img)
 cv.imshow("Resultado", img)
 
@@ -25,4 +25,6 @@ rgb = plt.hist(r.ravel(), 256, [0, 256], color="red") + plt.hist(g.ravel(), 256,
 
 
 plt.show()
+
+cv.waitKey(0)
 cv.destroyAllWindows()
